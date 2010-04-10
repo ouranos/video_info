@@ -40,9 +40,9 @@ describe "VideoInfo" do
     its(:duration)         { should == 175 }
     its(:width)            { should == 640 }
     its(:height)           { should == 360 }
-    its(:date)             { should == Time.parse('Mon Apr 14 13:10:39 +0200 2008') }
-    its(:thumbnail_small)  { should == 'http://ts.vimeo.com.s3.amazonaws.com/343/731/34373130_100.jpg' }
-    its(:thumbnail_large)  { should == 'http://ts.vimeo.com.s3.amazonaws.com/343/731/34373130_640.jpg' }
+    its(:date)             { should == Time.parse('Mon Apr 14 13:10:39 -0400 2008') }
+    its(:thumbnail_small)  { should == 'http://ats.vimeo.com/343/731/34373130_100.jpg' }
+    its(:thumbnail_large)  { should == 'http://ats.vimeo.com/343/731/34373130_640.jpg' }
     it { should be_valid }
   end
   

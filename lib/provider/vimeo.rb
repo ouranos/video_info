@@ -1,4 +1,4 @@
-require 'hpricot'
+require 'nokogiri'
 require 'open-uri'
 
 class Vimeo
@@ -14,7 +14,7 @@ class Vimeo
 private
   
   def get_info
-    doc = Hpricot(open("http://vimeo.com/api/v2/video/#{@video_id}.xml"))
+    doc = Nokogiri::XML(open("http://vimeo.com/api/v2/video/#{@video_id}.xml"))  
     @provider         = "Vimeo"
     @url              = doc.search("url").inner_text
     @title            = doc.search("title").inner_text
