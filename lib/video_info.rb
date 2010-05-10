@@ -1,6 +1,7 @@
 require 'provider/vimeo'
 require 'provider/youtube'
 require 'provider/dailymotion'
+require 'provider/metacafe'
 
 class VideoInfo
   
@@ -12,6 +13,8 @@ class VideoInfo
       @video = Youtube.new(url)
     when /dailymotion\.com/
       @video = Dailymotion.new(url)
+    when /metacafe\.com/
+      @video = Metacafe.new(url)
     end
   end
   

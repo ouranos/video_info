@@ -64,6 +64,22 @@ describe "VideoInfo" do
       it { should be_valid }
   end
 
+  describe "from Metacafe" do
+      subject { VideoInfo.new('http://www.metacafe.com/watch/3982016/hands_on_with_googles_nexus_one_video/') }
+
+      its(:provider)         { should == 'Metacafe' }
+      its(:video_id)         { should == '3982016' }
+      its(:url)              { should == 'http://www.metacafe.com/watch/3982016/hands_on_with_googles_nexus_one_video/' }
+      its(:title)            { should == "Hands on with Google's Nexus One (video)" }
+      its(:description)      { should == "CNET's Josh Lowensohn walks through some of the key features of Google's new smartphone, made by HTC." }
+      its(:keywords)         { should == 'News,Josh Lowensohn,Google,Google Phone,Android,Cell Phones,Smart Phone,Super Phone,Nexus One' }
+      its(:duration)         { should == 225 }
+      its(:date)             { should == Time.parse('11-Jan-10 +0000')}
+      its(:thumbnail_small)  { should == 'http://s1.mcstatic.com/thumb/3982016/12767900/4/catalog_item5/0/1/hands_on_with_googles_nexus_one_video.jpg?v=10' }
+      its(:thumbnail_large)  { should == 'http://s1.mcstatic.com/thumb/3982016/12767900/4/catalog_item5/0/1/hands_on_with_googles_nexus_one_video.jpg?v=10' }
+      it { should be_valid }
+  end
+
   it "should be invalid with misstaped url" do
     video = VideoInfo.new('http://www.vimeo.com/1')
     video.should_not be_valid
