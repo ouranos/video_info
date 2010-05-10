@@ -1,7 +1,9 @@
-require 'provider/vimeo'
-require 'provider/youtube'
-require 'provider/dailymotion'
-require 'provider/metacafe'
+require 'provider'
+
+# Load providers definitions
+dir = File.dirname(__FILE__) + '/provider/'
+$LOAD_PATH.unshift(dir)
+Dir[File.join(dir, '*.rb')].each {|file| require File.basename(file, File.extname(file))}
 
 class VideoInfo
   
@@ -25,5 +27,5 @@ class VideoInfo
   def method_missing(sym, *args, &block)
     @video.send sym, *args, &block
   end
-  
+
 end

@@ -1,11 +1,5 @@
-require 'nokogiri'
-require 'open-uri'
+class Dailymotion < Provider
 
-class Dailymotion
-  attr_accessor :video_id, :url, :provider, :title, :description, :keywords,
-                :duration, :date, :width, :height,
-                :thumbnail_small, :thumbnail_large
-  
   def initialize(url)
     @video_id = url.gsub(/.*\.com\/video\/([0-9A-Za-z-]+).*$/i, '\1')
     get_info unless @video_id == url

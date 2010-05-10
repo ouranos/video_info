@@ -1,10 +1,4 @@
-require 'nokogiri'
-require 'open-uri'
-
-class Metacafe
-  attr_accessor :video_id, :url, :provider, :title, :description, :keywords,
-                :duration, :date, :width, :height,
-                :thumbnail_small, :thumbnail_large
+class Metacafe < Provider
 
   def initialize(url)
     @video_id = url.gsub(/.*\.com\/watch\/([0-9]+)\/.*$/i, '\1')

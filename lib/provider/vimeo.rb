@@ -1,11 +1,5 @@
-require 'nokogiri'
-require 'open-uri'
+class Vimeo < Provider
 
-class Vimeo
-  attr_accessor :video_id, :url, :provider, :title, :description, :keywords,
-                :duration, :date, :width, :height,
-                :thumbnail_small, :thumbnail_large
-  
   def initialize(url)
     @video_id = url.gsub(/.*\.com\/([0-9]+).*$/i, '\1')
     get_info unless @video_id == url
