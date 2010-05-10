@@ -17,6 +17,8 @@ class VideoInfo
       @video = Dailymotion.new(url)
     when /metacafe\.com/
       @video = Metacafe.new(url)
+    when /viddler\.com/
+      @video = Viddler.new(url)
     end
   end
   

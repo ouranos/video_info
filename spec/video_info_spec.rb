@@ -80,6 +80,25 @@ describe "VideoInfo" do
       it { should be_valid }
   end
 
+
+  describe "from Viddler" do
+      subject { VideoInfo.new('http://www.viddler.com/explore/engadget/videos/865/') }
+
+      its(:provider)         { should == "Viddler" }
+      its(:video_id)         { should == '9ae1f39' }
+      its(:url)              { should == 'http://www.viddler.com/explore/engadget/videos/865/' }
+      its(:title)            { should == "Google Nexus One UI walkthrough (Engadget exclusive)" }
+      its(:description)      { should == "An exclusive first look at Google's Nexus One UI." }
+      its(:keywords)         { should == "one, features, ui, google, android, 2.1, user interface, nexus, walkthrough, nexus one, android 2.1, google nexus one" }
+      its(:duration)         { should == 301 }
+      its(:width)            { should == 640 }
+      its(:height)           { should == 424 }
+      its(:date)             { should == Time.at(1262474752) }
+      its(:thumbnail_small)  { should == 'http://cdn-thumbs.viddler.com/thumbnail_2_9ae1f39.jpg' }
+      its(:thumbnail_large)  { should == 'http://cdn-thumbs.viddler.com/thumbnail_2_9ae1f39.jpg' }
+      it { should be_valid }
+  end
+
   it "should be invalid with misstaped url" do
     video = VideoInfo.new('http://www.vimeo.com/1')
     video.should_not be_valid
