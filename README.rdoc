@@ -1,11 +1,11 @@
 = VideoInfo
   
 Small Ruby plugin to get video info from :
- * Youtube
- * Vimeo
- * Dailymotion
- * Viddler
- * Metacafe
+* Youtube
+* Vimeo
+* Dailymotion
+* Viddler
+* Metacafe
 
 == Install
   
@@ -47,10 +47,10 @@ Small Ruby plugin to get video info from :
 
 == Authors
 
-Original code by Thibaud Guillaume-Gentil (http://github.com/thibaudgg/video_info)
-Nokogiri fork by William Schneider (http://github.com/bananastalktome/video_info)
-Some extensions inspired by Florian Lamache (http://github.com/Florian95/video_info)
-Extended by Olivier Brisse (http://github.com/ouranos/video_info)
+* Original code by Thibaud Guillaume-Gentil (http://github.com/thibaudgg/video_info)
+* Nokogiri fork by William Schneider (http://github.com/bananastalktome/video_info)
+* Some extensions inspired by Florian Lamache (http://github.com/Florian95/video_info)
+* Extended by Olivier Brisse (http://github.com/ouranos/video_info)
 
 == License
 
