@@ -4,7 +4,8 @@ require 'open-uri'
 class Provider
   attr_accessor :video_id, :url, :provider, :title, :description, :keywords,
                 :duration, :date, :width, :height,
-                :thumbnail_small, :thumbnail_large
+                :thumbnail_small, :thumbnail_large,
+                :player
 
   def initialize(url)
   end

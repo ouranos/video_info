@@ -11,6 +11,7 @@ class Viddler < Provider
     @provider         = "Viddler"
     @video_id         = doc.xpath("/video/id").inner_text
     @url              = doc.xpath("/video/permalink").inner_text
+    @player           = "http://www.viddler.com/player/#{@video_id}/"
     @title            = doc.xpath("/video/title").inner_text
     @description      = doc.xpath("/video/description").inner_text
     @keywords         = doc.xpath("/video/tags").children.collect(&:inner_text).join(", ")

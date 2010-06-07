@@ -11,6 +11,7 @@ private
     doc = Nokogiri::XML(open("http://vimeo.com/api/v2/video/#{@video_id}.xml"))  
     @provider         = "Vimeo"
     @url              = doc.search("url").inner_text
+    @player           = "http://vimeo.com/moogaloop.swf?clip_id=#{@video_id}&server=vimeo.com&show_title=1&show_portrait=0&fullscreen=1"
     @title            = doc.search("title").inner_text
     @description      = doc.search("description").inner_text
     @keywords         = doc.search("tags").inner_text

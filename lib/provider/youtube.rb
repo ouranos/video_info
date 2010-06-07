@@ -11,6 +11,7 @@ private
     doc = Nokogiri::XML(open("http://gdata.youtube.com/feeds/api/videos/#{@video_id}"))
     @provider         = "YouTube"
     @url              = "http://www.youtube.com/watch?v=#{@video_id}"
+    @player           = "http://www.youtube.com/v/#{@video_id}&fs=1"
     @title            = doc.xpath("//media:title").inner_text
     @description      = doc.xpath("//media:description").inner_text
     @keywords         = doc.xpath("//media:keywords").inner_text

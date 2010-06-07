@@ -8,6 +8,7 @@ describe "VideoInfo" do
     its(:provider)         { should == 'YouTube' }
     its(:video_id)         { should == 'mZqGqE0D0n4' }
     its(:url)              { should == 'http://www.youtube.com/watch?v=mZqGqE0D0n4' }
+    its(:player)           { should == 'http://www.youtube.com/v/mZqGqE0D0n4&fs=1' }
     its(:title)            { should == 'Cherry Bloom - King Of The Knife' }
     its(:description)      { should == 'The first video from the upcoming album Secret Sounds, to download in-stores April 14. Checkout http://www.cherrybloom.net' }
     its(:keywords)         { should == 'cherry, bloom, king, of, the, knife, guitar, drum, clip, rock, alternative, tremplin, Paris-Forum' }
@@ -34,6 +35,7 @@ describe "VideoInfo" do
     its(:provider)         { should == 'Vimeo' }
     its(:video_id)         { should == '898029' }
     its(:url)              { should == 'http://vimeo.com/898029' }
+    its(:player)           { should == 'http://vimeo.com/moogaloop.swf?clip_id=898029&server=vimeo.com&show_title=1&show_portrait=0&fullscreen=1' }
     its(:title)            { should == 'Cherry Bloom - King Of The Knife' }
     its(:description)      { should == 'The first video from the upcoming album Secret Sounds, to download in-stores April 14. Checkout http://www.cherrybloom.net' }
     its(:keywords)         { should == 'cherry bloom, secret sounds, king of the knife, rock, alternative' }
@@ -52,6 +54,7 @@ describe "VideoInfo" do
       its(:provider)         { should == 'Dailymotion' }
       its(:video_id)         { should == 'x52tk6' }
       its(:url)              { should == 'http://www.dailymotion.com/video/x52tk6_cherry-bloom-king-of-the-knife_music' }
+      its(:player)           { should == 'http://www.dailymotion.com/swf/video/x52tk6' }
       its(:title)            { should == 'Cherry Bloom - King Of The Knife' }
       its(:description)      { should == 'The first video from the upcoming album Secret Sounds, to download in-stores April 14. Checkout www.cherrybloom.netNo producer, no label, no majorJ...' }
       its(:keywords)         { should == 'cherry, bloom, king, the, knife, secret, sounds, rock, alternative, clip' }
@@ -70,6 +73,7 @@ describe "VideoInfo" do
       its(:provider)         { should == 'Metacafe' }
       its(:video_id)         { should == '3982016' }
       its(:url)              { should == 'http://www.metacafe.com/watch/3982016/hands_on_with_googles_nexus_one_video/' }
+      its(:player)           { should == 'http://www.metacafe.com/fplayer/3982016/hands_on_with_googles_nexus_one_video.swf' }
       its(:title)            { should == "Hands on with Google's Nexus One (video)" }
       its(:description)      { should == "CNET's Josh Lowensohn walks through some of the key features of Google's new smartphone, made by HTC." }
       its(:keywords)         { should == 'News,Josh Lowensohn,Google,Google Phone,Android,Cell Phones,Smart Phone,Super Phone,Nexus One' }
@@ -87,6 +91,7 @@ describe "VideoInfo" do
       its(:provider)         { should == "Viddler" }
       its(:video_id)         { should == '9ae1f39' }
       its(:url)              { should == 'http://www.viddler.com/explore/engadget/videos/865/' }
+      its(:player)           { should == 'http://www.viddler.com/player/9ae1f39/' }
       its(:title)            { should == "Google Nexus One UI walkthrough (Engadget exclusive)" }
       its(:description)      { should == "An exclusive first look at Google's Nexus One UI." }
       its(:keywords)         { should == "one, features, ui, google, android, 2.1, user interface, nexus, walkthrough, nexus one, android 2.1, google nexus one" }

@@ -1,10 +1,15 @@
 = VideoInfo
   
-Small Ruby Gem to get video info from youtube and vimeo url.
-  
+Small Ruby plugin to get video info from :
+ * Youtube
+ * Vimeo
+ * Dailymotion
+ * Viddler
+ * Metacafe
+
 == Install
   
-  gem install video_info --source http://gemcutter.org
+  ./script/plugin install git://github.com/ouranos/video_info.git
   
 == Usage
   
@@ -19,6 +24,7 @@ Small Ruby Gem to get video info from youtube and vimeo url.
   video.date             => Sat Apr 12 22:25:35 UTC 2008
   video.thumbnail_small  => "http://i.ytimg.com/vi/mZqGqE0D0n4/2.jpg"
   video.thumbnail_large  => "http://i.ytimg.com/vi/mZqGqE0D0n4/0.jpg"
+  video.player           => "http://www.youtube.com/v/mZqGqE0D0n4&fs=1"
   
   video = VideoInfo.new("http://vimeo.com/898029")
   
@@ -33,14 +39,22 @@ Small Ruby Gem to get video info from youtube and vimeo url.
   video.height           => 360
   video.thumbnail_small  => "http://ts.vimeo.com.s3.amazonaws.com/343/731/34373130_100.jpg"
   video.thumbnail_large  => "http://ts.vimeo.com.s3.amazonaws.com/343/731/34373130_640.jpg"
+  video.player           => "http://vimeo.com/moogaloop.swf?clip_id=898029&server=vimeo.com&show_title=1&show_portrait=0&fullscreen=1"
   
   video = VideoInfo.new("http://badurl.com/898029")
   
   video.valid? => false
-  
+
+== Authors
+
+Original code by Thibaud Guillaume-Gentil (http://github.com/thibaudgg/video_info)
+Nokogiri fork by William Schneider (http://github.com/bananastalktome/video_info)
+Some extensions inspired by Florian Lamache (http://github.com/Florian95/video_info)
+Extended by Olivier Brisse (http://github.com/ouranos/video_info)
+
 == License
 
-Copyright (c) 2008 Thibaud Guillaume-Gentil
+Copyright (c) 2010 Olivier Brisse
  
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
