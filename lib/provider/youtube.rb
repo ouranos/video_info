@@ -17,8 +17,8 @@ private
     @keywords         = doc.xpath("//media:keywords").inner_text
     @duration         = doc.xpath("//yt:duration").first[:seconds].to_i
     @date             = Time.parse(doc.search("published").inner_text, Time.now.utc)
-    @thumbnail_small  = doc.xpath("//media:thumbnail").first[:url]
-    @thumbnail_large  = doc.xpath("//media:thumbnail").last[:url]
+    @thumbnail_small  = doc.xpath('//media:thumbnail[@width="120"]').first[:url]
+    @thumbnail_large  = doc.xpath('//media:thumbnail[@width="320"]').last[:url]
   end
   
 end

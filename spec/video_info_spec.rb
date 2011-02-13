@@ -16,7 +16,7 @@ describe "VideoInfo" do
     its(:width)            { should be_nil }
     its(:height)           { should be_nil }
     its(:date)             { should == Time.parse('Sat Apr 12 22:25:35 UTC 2008') }
-    its(:thumbnail_small)  { should == 'http://i.ytimg.com/vi/mZqGqE0D0n4/2.jpg' }
+    its(:thumbnail_small)  { should == 'http://i.ytimg.com/vi/mZqGqE0D0n4/1.jpg' }
     its(:thumbnail_large)  { should == 'http://i.ytimg.com/vi/mZqGqE0D0n4/0.jpg' }
     it { should be_valid }
   end
@@ -43,8 +43,8 @@ describe "VideoInfo" do
     its(:width)            { should == 640 }
     its(:height)           { should == 360 }
     its(:date)             { should == Time.parse('Mon Apr 14 13:10:39 CEST 2008') }
-    its(:thumbnail_small)  { should == 'http://ats.vimeo.com/343/731/34373130_100.jpg' }
-    its(:thumbnail_large)  { should == 'http://ats.vimeo.com/343/731/34373130_640.jpg' }
+    its(:thumbnail_small)  { should == 'http://b.vimeocdn.com/ts/343/731/34373130_100.jpg' }
+    its(:thumbnail_large)  { should == 'http://b.vimeocdn.com/ts/343/731/34373130_640.jpg' }
     it { should be_valid }
   end
 
@@ -60,10 +60,10 @@ describe "VideoInfo" do
       its(:keywords)         { should == 'cherry, bloom, king, the, knife, secret, sounds, rock, alternative, clip' }
       its(:duration)         { should == 175 }
       its(:width)            { should == 480 }
-      its(:height)           { should == 298 }
+      its(:height)           { should == 277 }
       its(:date)             { should == Time.parse('Mon, 14 Apr 2008 20:35:02 +0200') }
-      its(:thumbnail_small)  { should == 'http://ak2.static.dailymotion.com/static/video/207/925/8529702:jpeg_preview_large.jpg?20100321022950' }
-      its(:thumbnail_large)  { should == 'http://ak2.static.dailymotion.com/static/video/207/925/8529702:jpeg_preview_large.jpg?20100321022950' }
+      its(:thumbnail_small)  { should == 'http://static2.dmcdn.net/static/video/207/925/8529702:jpeg_preview_large.jpg?20100725174318' }
+      its(:thumbnail_large)  { should == 'http://static2.dmcdn.net/static/video/207/925/8529702:jpeg_preview_large.jpg?20100725174318' }
       it { should be_valid }
   end
 

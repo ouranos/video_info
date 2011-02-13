@@ -21,7 +21,7 @@ private
     @thumbnail_small  = doc.xpath("//media:thumbnail").first[:url]
     @thumbnail_large  = doc.xpath("//media:thumbnail").last[:url]
     content           = doc.xpath("//media:content").first
-    @player           = content[:url] if content[:type] == "application/x-shockwave-flash"	
+    @player           = "http://www.dailymotion.com/swf/video/#{@video_id}"	
   end
-  
+
 end
